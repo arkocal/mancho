@@ -3,7 +3,6 @@
 #include <vector>
 #include <string>
 #include <QMainWindow>
-#include <QAudioFormat>
 #include <QThread>
 
 #include "markermanager.h"
@@ -33,6 +32,10 @@ private slots:
     void keyPressEvent(QKeyEvent *event);
     void onViewRangeChange(const QCPRange&);
     void on_actionShow_Hide_Help_toggled(bool arg1);
+
+    void on_playbackSpeedSlider_valueChanged(int value);
+
+    void on_actionOpen_Source_Licenses_triggered();
 
 private:
     Ui::MainWindow *ui;

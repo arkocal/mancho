@@ -240,3 +240,19 @@ void MainWindow::on_actionShow_Hide_Help_toggled(bool checked)
 {
   ui->helpText->setVisible(checked);
 }
+
+void MainWindow::on_playbackSpeedSlider_valueChanged(int value)
+{
+    ui->playbackSpeedLabel->setText(QStringLiteral("%1%").arg(value));
+}
+
+void MainWindow::on_actionOpen_Source_Licenses_triggered()
+{
+    QMessageBox::information(
+        this,
+        tr("Mancho Open Source Licenses"),
+        tr("Mancho is licensed under GPLv3.\n"
+           "It uses/includes the following (L)GPL software:\n"
+           "AudioFile, Rubberband, QT, QCustomplot\n"
+           "See https://github.com/arkocal/mancho for details"));
+}
